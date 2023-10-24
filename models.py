@@ -94,4 +94,4 @@ class Cart:
                 raise ValueError
             else:
                 product.buy(quantity)
-            self.products.clear()
+        self.clear()
