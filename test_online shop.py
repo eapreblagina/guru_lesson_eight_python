@@ -86,11 +86,6 @@ class TestCart:
         cart.buy()
         assert cart.products == {}
 
-    # def test_buy_empty_cart(self, product, cart):
-    #     assert cart.get_total_price() == None
-    #     cart.buy()
-    #     assert not cart.products
-
     def test_cart_buy_more_than_available(self, product, cart):
         cart.add_product(product, buy_count=1003)
         with pytest.raises(ValueError):
